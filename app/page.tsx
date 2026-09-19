@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
 import TrustSection from "@/components/TrustSection";
 import CategoryFilter from "@/components/CategoryFilter";
 import Footer from "@/components/Footer";
@@ -15,7 +15,6 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [listings, setListings] = useState<Listing[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [showAllListings, setShowAllListings] = useState<boolean>(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -35,12 +34,6 @@ export default function Home() {
   return (
     <>
       <Navbar searchValue={searchValue} onSearchChange={setSearchValue} />
-      <HeroSection />
-      <TrustSection />
-      <CategoryFilter
-        activeCategory={activeCategory}
-        onCategoryChange={setActiveCategory}
-      />
 
       <h2 className="text-2xl font-bold px-4 md:px-8 pt-8">
         Alojamientos enteros con las mejores comodidades
@@ -48,6 +41,11 @@ export default function Home() {
       <p className="text-gray-500 px-4 md:px-8 mb-4">
         Encuentra alojamientos con cocina, wifi, jacuzzis y mucho más.
       </p>
+      <CategoryFilter
+        activeCategory={activeCategory}
+        onCategoryChange={setActiveCategory}
+      />
+
       <main>
         {isLoading ? (
           <p className="p-8 text-center">Cargando alojamientos...</p>
@@ -56,26 +54,24 @@ export default function Home() {
         ) : (
           <>
             <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 md:p-8">
-              {(showAllListings
-                ? filteredListings
-                : filteredListings.slice(0, 3)
-              ).map((listing) => (
+              {filteredListings.slice(0, 3).map((listing) => (
                 <ListingCard key={listing.id} listing={listing} />
               ))}
             </div>
             {filteredListings.length > 3 && (
               <div className="flex justify-center p-4">
-                <button
-                  onClick={() => setShowAllListings((current) => !current)}
+                <Link
+                  href="/catalog"
                   className="border border-gray-900 rounded-full px-6 py-2 font-medium hover:bg-gray-900 hover:text-white"
                 >
-                  {showAllListings ? "Ver menos" : "Descubre más"}
-                </button>
+                  Descubre más
+                </Link>
               </div>
             )}
           </>
         )}
       </main>
+      <TrustSection />
       <Footer />
     </>
   );

@@ -15,7 +15,9 @@ const Navbar = ({ searchValue, onSearchChange }: NavbarProps) => {
 
   return (
     <nav className="relative flex w-full items-center justify-between border-b border-gray-200 px-4 py-4 md:px-8">
-      <span className="text-xl font-bold text-rose-500">staybnb</span>
+      <Link href="/" className="text-xl font-bold text-rose-500">
+        staybnb
+      </Link>
 
       <div className="relative mx-4 w-full max-w-md">
         <SearchIcon className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-500" />
