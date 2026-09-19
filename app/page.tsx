@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import TrustSection from "@/components/TrustSection";
 import CategoryFilter from "@/components/CategoryFilter";
 import Footer from "@/components/Footer";
 import ListingCard from "@/components/ListingCard";
@@ -32,6 +34,8 @@ export default function Home() {
   return (
     <>
       <Navbar searchValue={searchValue} onSearchChange={setSearchValue} />
+      <HeroSection />
+      <TrustSection />
       <CategoryFilter
         activeCategory={activeCategory}
         onCategoryChange={setActiveCategory}
