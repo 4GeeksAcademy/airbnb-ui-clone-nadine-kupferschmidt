@@ -53,11 +53,9 @@ export const AcIcon = (props: SVGProps<SVGSVGElement>) => (
 
 export const BeachIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg {...defaultProps} {...props}>
-    <path d="M2 22c4-4 8-4 12 0" />
-    <path d="M12 2c5.5 5.5 8 12.5 4 16.5" />
-    <path d="M12 2c-1.7 5-1 9.5 2 12.5" />
-    <path d="M12 2c1.7 5 1 9.5-2 12.5" />
-    <path d="M2 22l8-8" />
+    <path d="M2 6c2 2 4 4 6 0" />
+    <path d="M4 10c2 2 4 4 6 0" />
+    <path d="M6 14c2 2 4 4 6 0" />
   </svg>
 );
 
@@ -109,5 +107,24 @@ export const TrophyIcon = (props: SVGProps<SVGSVGElement>) => (
     <path d="M7 4h10v5a5 5 0 0 1-10 0V4z" />
     <path d="M7 5H4a2 2 0 0 0 0 4h3" />
     <path d="M17 5h3a2 2 0 0 1 0 4h-3" />
+  </svg>
+);
+
+export const CabinIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...defaultProps} {...props}>
+    <path d="M3 10L12 3l9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10z" />
+    <path d="M8 21V14h8v7" />
+  </svg>
+);
+
+export const DropletIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...defaultProps} {...props}>
+    <path d="M12 2C9 7 6 11 6 14a6 6 0 0 0 12 0c0-3-3-7-6-12z" />
+  </svg>
+);
+
+export const TreeIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...defaultProps} {...props}>
+    <path d="M12 2L6 10h3v5h-3l6 7 6-7h-3v-5h3L12 2z" />
   </svg>
 );

@@ -1,17 +1,17 @@
 "use client";
 
 import {
-  AcIcon,
   BeachIcon,
-  KitchenIcon,
-  ParkingIcon,
+  CabinIcon,
+  DropletIcon,
+  TreeIcon,
 } from "@/components/icons";
 
 const categories = [
   { label: "Playa", Icon: BeachIcon },
-  { label: "Cabañas", Icon: ParkingIcon },
-  { label: "Piscina", Icon: AcIcon },
-  { label: "Vistas", Icon: KitchenIcon },
+  { label: "Cabañas", Icon: CabinIcon },
+  { label: "Piscina", Icon: DropletIcon },
+  { label: "Vistas", Icon: TreeIcon },
 ];
 
 interface CategoryFilterProps {
@@ -35,7 +35,7 @@ const CategoryFilter = ({
             onClick={() => onCategoryChange(isActive ? null : label)}
             className={`flex shrink-0 flex-col items-center border-b-2 px-2 pb-2 text-sm ${
               isActive
-                ? "border-gray-900 text-gray-900"
+                ? "border-rose-500 text-rose-500"
                 : "border-transparent text-gray-500"
             }`}
           >

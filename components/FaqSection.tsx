@@ -4,9 +4,9 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "¿Qué es y cómo funciona Airbnb?",
+    question: "¿Qué es y cómo funciona Staybnb?",
     answer:
-      "Airbnb es una plataforma que conecta a huéspedes con anfitriones que ofrecen alojamientos únicos alrededor del mundo. Buscás, reservás y pagás todo desde la plataforma de forma segura.",
+      "Staybnb es una plataforma que conecta a huéspedes con anfitriones que ofrecen alojamientos únicos alrededor del mundo. Buscás, reservás y pagás todo desde la plataforma de forma segura.",
   },
   {
     question: "¿Cómo se usan los filtros de búsqueda?",

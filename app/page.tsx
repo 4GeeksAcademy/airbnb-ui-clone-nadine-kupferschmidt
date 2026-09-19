@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TrustSection from "@/components/TrustSection";
+import FaqSection from "@/components/FaqSection";
 import CategoryFilter from "@/components/CategoryFilter";
 import Footer from "@/components/Footer";
 import ListingCard from "@/components/ListingCard";
@@ -58,11 +59,11 @@ export default function Home() {
                 <ListingCard key={listing.id} listing={listing} />
               ))}
             </div>
-            {filteredListings.length > 3 && (
+            {(activeCategory !== null || filteredListings.length > 3) && (
               <div className="flex justify-center p-4">
                 <Link
                   href="/catalog"
-                  className="border border-gray-900 rounded-full px-6 py-2 font-medium hover:bg-gray-900 hover:text-white"
+                  className="border border-gray-900 rounded-full px-6 py-2 font-medium hover:bg-rose-500 hover:text-white hover:border-rose-500"
                 >
                   Descubre más
                 </Link>
@@ -72,6 +73,7 @@ export default function Home() {
         )}
       </main>
       <TrustSection />
+      <FaqSection />
       <Footer />
     </>
   );

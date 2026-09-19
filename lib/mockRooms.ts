@@ -24,10 +24,9 @@ export const mockRooms: Room[] = [
     beds: 3,
     bathrooms: 1,
     photos: [
-      "https://loremflickr.com/800/600/house,interior?random=1",
-      "https://loremflickr.com/800/600/house,interior?random=2",
-      "https://loremflickr.com/800/600/house,interior?random=3",
-      "https://loremflickr.com/800/600/house,interior?random=4",
+      "https://loremflickr.com/600/400/cabin,forest?lock=1",
+      "https://loremflickr.com/600/400/cabin,forest,bedroom?lock=11",
+      "https://loremflickr.com/600/400/cabin,forest,kitchen?lock=21",
     ],
     guestCount: 4,
     host: {
@@ -51,10 +50,9 @@ export const mockRooms: Room[] = [
     beds: 1,
     bathrooms: 1,
     photos: [
-      "https://loremflickr.com/800/600/house,interior?random=5",
-      "https://loremflickr.com/800/600/house,interior?random=6",
-      "https://loremflickr.com/800/600/house,interior?random=7",
-      "https://loremflickr.com/800/600/house,interior?random=8",
+      "https://loremflickr.com/600/400/apartment,interior?lock=2",
+      "https://loremflickr.com/600/400/apartment,interior,bedroom?lock=12",
+      "https://loremflickr.com/600/400/apartment,interior,kitchen?lock=22",
     ],
     guestCount: 2,
     host: {
@@ -72,11 +70,9 @@ export const mockRooms: Room[] = [
     imageUrl: "https://picsum.photos/seed/casa-montana/600/400",
     pricePerNight: 62000,
     photos: [
-      "https://loremflickr.com/800/600/house,interior?random=9",
-      "https://loremflickr.com/800/600/house,interior?random=10",
-      "https://loremflickr.com/800/600/house,interior?random=11",
-      "https://loremflickr.com/800/600/house,interior?random=12",
-      "https://loremflickr.com/800/600/house,interior?random=13",
+      "https://loremflickr.com/600/400/house,mountain?lock=3",
+      "https://loremflickr.com/600/400/house,mountain,bedroom?lock=13",
+      "https://loremflickr.com/600/400/house,mountain,kitchen?lock=23",
     ],
     guestCount: 6,
     host: {
@@ -97,10 +93,9 @@ export const mockRooms: Room[] = [
     reviewCount: 37,
     isFreeCancellation: true,
     photos: [
-      "https://loremflickr.com/800/600/house,interior?random=14",
-      "https://loremflickr.com/800/600/house,interior?random=15",
-      "https://loremflickr.com/800/600/house,interior?random=16",
-      "https://loremflickr.com/800/600/house,interior?random=17",
+      "https://loremflickr.com/600/400/loft,beach?lock=4",
+      "https://loremflickr.com/600/400/loft,beach,bedroom?lock=14",
+      "https://loremflickr.com/600/400/loft,beach,kitchen?lock=24",
     ],
     guestCount: 2,
     host: {
@@ -118,9 +113,9 @@ export const mockRooms: Room[] = [
     imageUrl: "https://picsum.photos/seed/habitacion-familiar/600/400",
     pricePerNight: 22000,
     photos: [
-      "https://loremflickr.com/800/600/house,interior?random=18",
-      "https://loremflickr.com/800/600/house,interior?random=19",
-      "https://loremflickr.com/800/600/house,interior?random=20",
+      "https://loremflickr.com/600/400/bedroom,house?lock=5",
+      "https://loremflickr.com/600/400/bedroom,house,bedroom?lock=15",
+      "https://loremflickr.com/600/400/bedroom,house,kitchen?lock=25",
     ],
     guestCount: 1,
     host: {
@@ -143,10 +138,9 @@ export const mockRooms: Room[] = [
     beds: 5,
     bathrooms: 3,
     photos: [
-      "https://loremflickr.com/800/600/house,interior?random=21",
-      "https://loremflickr.com/800/600/house,interior?random=22",
-      "https://loremflickr.com/800/600/house,interior?random=23",
-      "https://loremflickr.com/800/600/house,interior?random=24",
+      "https://loremflickr.com/600/400/villa,pool?lock=6",
+      "https://loremflickr.com/600/400/villa,pool,bedroom?lock=16",
+      "https://loremflickr.com/600/400/villa,pool,kitchen?lock=26",
     ],
     guestCount: 10,
     host: {

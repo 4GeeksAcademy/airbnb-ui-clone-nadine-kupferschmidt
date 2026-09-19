@@ -19,7 +19,7 @@ const ListingCard = ({ listing }: ListingCardProps) => {
 
   return (
     <Link href={`/rooms/${listing.id}`} className="block w-full">
-      <div className="relative">
+      <div className="relative rounded-xl overflow-hidden transition-shadow duration-200 hover:ring-2 hover:ring-rose-500">
         <img
           src={listing.imageUrl}
           alt={listing.title}

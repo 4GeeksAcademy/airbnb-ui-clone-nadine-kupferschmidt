@@ -22,7 +22,7 @@ const FilterChips = () => {
   };
 
   return (
-    <div className="flex gap-3 overflow-x-auto px-4 py-3 md:px-8">
+    <div className="flex justify-center gap-3 overflow-x-auto px-4 py-3 md:px-8">
       {filters.map((filter) => {
         const isActive = activeFilters.includes(filter);
 
@@ -33,7 +33,7 @@ const FilterChips = () => {
             onClick={() => toggleFilter(filter)}
             className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm ${
               isActive
-                ? "border-gray-900 bg-gray-900 text-white"
+                ? "border-rose-500 bg-rose-500 text-white"
                 : "border-gray-300 text-gray-700"
             }`}
           >

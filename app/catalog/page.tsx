@@ -59,7 +59,7 @@ const CatalogPage = () => {
               }
               className={`rounded-full border px-4 py-2 text-sm ${
                 sortOrder === "asc"
-                  ? "border-gray-900 bg-gray-900 text-white"
+                  ? "border-rose-500 bg-rose-500 text-white"
                   : "border-gray-300 text-gray-700 hover:bg-gray-100"
               }`}
             >
@@ -74,7 +74,7 @@ const CatalogPage = () => {
               }
               className={`rounded-full border px-4 py-2 text-sm ${
                 sortOrder === "desc"
-                  ? "border-gray-900 bg-gray-900 text-white"
+                  ? "border-rose-500 bg-rose-500 text-white"
                   : "border-gray-300 text-gray-700 hover:bg-gray-100"
               }`}
             >

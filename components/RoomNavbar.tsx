@@ -8,7 +8,9 @@ const RoomNavbar = () => {
 
   return (
     <nav className="flex items-center justify-between border-b border-gray-200 px-4 py-4 md:px-8">
-      <span className="text-xl font-bold text-rose-500">staybnb</span>
+      <Link href="/" className="text-xl font-bold text-rose-500">
+        staybnb
+      </Link>
 
       <Link
         href="/catalog"

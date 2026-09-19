@@ -26,7 +26,7 @@ const Navbar = ({ searchValue, onSearchChange }: NavbarProps) => {
           placeholder="Buscar alojamientos..."
           value={searchValue}
           onChange={(event) => onSearchChange(event.target.value)}
-          className="w-full max-w-md rounded-full border border-gray-300 py-2 pl-11 pr-4"
+          className="w-full max-w-md rounded-full border border-gray-300 py-2 pl-11 pr-4 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
         />
       </div>
 
