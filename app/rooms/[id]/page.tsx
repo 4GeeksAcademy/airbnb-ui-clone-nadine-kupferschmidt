@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 
 import AmenitiesGrid from "@/components/AmenitiesGrid";
 import BookingCard from "@/components/BookingCard";
+import Footer from "@/components/Footer";
 import HostInfo from "@/components/HostInfo";
 import PhotoGallery from "@/components/PhotoGallery";
 import RoomHeader from "@/components/RoomHeader";
@@ -54,6 +55,7 @@ const RoomPage = () => {
           <BookingCard pricePerNight={room.pricePerNight} />
         </div>
       </main>
+      <Footer />
     </>
   );
 };

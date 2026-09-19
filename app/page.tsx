@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import CategoryFilter from "@/components/CategoryFilter";
+import Footer from "@/components/Footer";
 import ListingCard from "@/components/ListingCard";
 import { mockListings } from "@/lib/mockListings";
 import type { Listing } from "@/types/listing";
@@ -43,6 +44,7 @@ export default function Home() {
           </div>
         )}
       </main>
+      <Footer />
     </>
   );
 }

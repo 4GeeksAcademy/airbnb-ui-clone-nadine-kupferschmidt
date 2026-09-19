@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import FilterChips from "@/components/FilterChips";
+import Footer from "@/components/Footer";
 import ListingCard from "@/components/ListingCard";
 import MapArea from "@/components/MapArea";
 import Navbar from "@/components/Navbar";
@@ -95,6 +96,7 @@ const CatalogPage = () => {
           </div>
         )}
       </main>
+      <Footer />
     </>
   );
 };
