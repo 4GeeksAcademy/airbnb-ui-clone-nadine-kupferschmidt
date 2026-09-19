@@ -10,7 +10,7 @@ import type { Listing } from "@/types/listing";
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState<string>("");
-  const [activeCategory, setActiveCategory] = useState<string>("Playa");
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [listings, setListings] = useState<Listing[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -26,7 +26,7 @@ export default function Home() {
   const filteredListings = listings.filter(
     (listing) =>
       listing.title.toLowerCase().includes(searchValue.toLowerCase()) &&
-      listing.category === activeCategory,
+      (activeCategory === null || listing.category === activeCategory),
   );
 
   return (

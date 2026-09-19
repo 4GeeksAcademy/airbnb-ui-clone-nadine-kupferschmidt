@@ -11,9 +11,11 @@ interface ListingCardProps {
 }
 
 const ListingCard = ({ listing }: ListingCardProps) => {
-  const details = [listing.bedrooms, listing.beds, listing.bathrooms].filter(
-    (value): value is number => value !== undefined
-  );
+  const details = [
+    listing.bedrooms !== undefined && `${listing.bedrooms} cuarto(s)`,
+    listing.beds !== undefined && `${listing.beds} cama(s)`,
+    listing.bathrooms !== undefined && `${listing.bathrooms} baño(s)`,
+  ].filter((detail): detail is string => Boolean(detail));
 
   return (
     <Link href={`/rooms/${listing.id}`} className="block w-full">

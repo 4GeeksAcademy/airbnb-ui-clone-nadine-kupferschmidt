@@ -15,8 +15,8 @@ const categories = [
 ];
 
 interface CategoryFilterProps {
-  activeCategory: string;
-  onCategoryChange: (category: string) => void;
+  activeCategory: string | null;
+  onCategoryChange: (category: string | null) => void;
 }
 
 const CategoryFilter = ({
@@ -32,7 +32,7 @@ const CategoryFilter = ({
           <button
             key={label}
             type="button"
-            onClick={() => onCategoryChange(label)}
+            onClick={() => onCategoryChange(isActive ? null : label)}
             className={`flex shrink-0 flex-col items-center border-b-2 px-2 pb-2 text-sm ${
               isActive
                 ? "border-gray-900 text-gray-900"
