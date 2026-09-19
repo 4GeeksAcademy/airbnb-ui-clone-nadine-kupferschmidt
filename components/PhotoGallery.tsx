@@ -28,6 +28,7 @@ const PhotoGallery = ({ photos }: PhotoGalleryProps) => {
           src={photos[currentIndex]}
           alt={`Foto ${currentIndex + 1}`}
           className="h-64 w-full rounded-xl object-cover md:h-96"
+          loading="lazy"
         />
         <button
           type="button"

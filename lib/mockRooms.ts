@@ -24,9 +24,10 @@ export const mockRooms: Room[] = [
     beds: 3,
     bathrooms: 1,
     photos: [
-      "https://loremflickr.com/600/400/cabin,forest?lock=1",
-      "https://loremflickr.com/600/400/cabin,forest,bedroom?lock=11",
-      "https://loremflickr.com/600/400/cabin,forest,kitchen?lock=21",
+      "https://images.unsplash.com/photo-1542213598-8fbf6282334b?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1631630259742-c0f0b17c6c10?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1631756964162-25c8c07579b5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1685290652388-2f22cb264207?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     guestCount: 4,
     host: {
@@ -50,9 +51,10 @@ export const mockRooms: Room[] = [
     beds: 1,
     bathrooms: 1,
     photos: [
-      "https://loremflickr.com/600/400/apartment,interior?lock=2",
-      "https://loremflickr.com/600/400/apartment,interior,bedroom?lock=12",
-      "https://loremflickr.com/600/400/apartment,interior,kitchen?lock=22",
+      "https://images.unsplash.com/photo-1723966094326-0df82e808fa3?q=80&w=778&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1781162017147-ac1aef8033ef?q=80&w=1554&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1708846263355-0375258845e8?q=80&w=914&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1710282709107-80784e9e00e3?q=80&w=920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     guestCount: 2,
     host: {
@@ -70,9 +72,10 @@ export const mockRooms: Room[] = [
     imageUrl: "https://picsum.photos/seed/casa-montana/600/400",
     pricePerNight: 62000,
     photos: [
-      "https://loremflickr.com/600/400/house,mountain?lock=3",
-      "https://loremflickr.com/600/400/house,mountain,bedroom?lock=13",
-      "https://loremflickr.com/600/400/house,mountain,kitchen?lock=23",
+      "https://plus.unsplash.com/premium_photo-1754251249087-570065936685?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1754415266974-404a215e6c62?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1726091097680-5da84f593ccd?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1484301548518-d0e0a5db0fc8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     guestCount: 6,
     host: {
@@ -93,9 +96,10 @@ export const mockRooms: Room[] = [
     reviewCount: 37,
     isFreeCancellation: true,
     photos: [
-      "https://loremflickr.com/600/400/loft,beach?lock=4",
-      "https://loremflickr.com/600/400/loft,beach,bedroom?lock=14",
-      "https://loremflickr.com/600/400/loft,beach,kitchen?lock=24",
+      "https://images.unsplash.com/photo-1788855704523-49fdc4a7e23a?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1661881879848-63b25f46e135?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1661881888792-80a1297a5b9e?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1610677420570-366cba5fbdbc?q=80&w=1748&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     guestCount: 2,
     host: {
@@ -113,9 +117,10 @@ export const mockRooms: Room[] = [
     imageUrl: "https://picsum.photos/seed/habitacion-familiar/600/400",
     pricePerNight: 22000,
     photos: [
-      "https://loremflickr.com/600/400/bedroom,house?lock=5",
-      "https://loremflickr.com/600/400/bedroom,house,bedroom?lock=15",
-      "https://loremflickr.com/600/400/bedroom,house,kitchen?lock=25",
+      "https://images.unsplash.com/photo-1560170412-0f7df0eb0fb1?q=80&w=1696&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1618220048045-10a6dbdf83e0?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     guestCount: 1,
     host: {
@@ -138,9 +143,10 @@ export const mockRooms: Room[] = [
     beds: 5,
     bathrooms: 3,
     photos: [
-      "https://loremflickr.com/600/400/villa,pool?lock=6",
-      "https://loremflickr.com/600/400/villa,pool,bedroom?lock=16",
-      "https://loremflickr.com/600/400/villa,pool,kitchen?lock=26",
+      "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1613977257421-010b50211cd3?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1613977257441-dd57bd5aaf70?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1613977257417-5c0b9c71439a?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     guestCount: 10,
     host: {
