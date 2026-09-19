@@ -2,6 +2,7 @@ export interface Listing {
   id: string;
   title: string;
   subtitle: string;
+  category: string;
   imageUrl: string;
   pricePerNight: number;
   originalPrice?: number;
