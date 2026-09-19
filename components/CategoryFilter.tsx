@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   AcIcon,
   BeachIcon,
@@ -15,9 +14,15 @@ const categories = [
   { label: "Vistas", Icon: KitchenIcon },
 ];
 
-const CategoryFilter = () => {
-  const [activeCategory, setActiveCategory] = useState(categories[0].label);
+interface CategoryFilterProps {
+  activeCategory: string;
+  onCategoryChange: (category: string) => void;
+}
 
+const CategoryFilter = ({
+  activeCategory,
+  onCategoryChange,
+}: CategoryFilterProps) => {
   return (
     <div className="flex justify-center gap-4 overflow-x-auto px-4 py-3 md:px-8">
       {categories.map(({ label, Icon }) => {
@@ -27,7 +32,7 @@ const CategoryFilter = () => {
           <button
             key={label}
             type="button"
-            onClick={() => setActiveCategory(label)}
+            onClick={() => onCategoryChange(label)}
             className={`flex shrink-0 flex-col items-center border-b-2 px-2 pb-2 text-sm ${
               isActive
                 ? "border-gray-900 text-gray-900"
