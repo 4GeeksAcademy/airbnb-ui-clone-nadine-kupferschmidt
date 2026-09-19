@@ -19,7 +19,7 @@ const CategoryFilter = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0].label);
 
   return (
-    <div className="flex gap-4 overflow-x-auto px-4 py-3 md:px-8">
+    <div className="flex justify-center gap-4 overflow-x-auto px-4 py-3 md:px-8">
       {categories.map(({ label, Icon }) => {
         const isActive = label === activeCategory;
 
