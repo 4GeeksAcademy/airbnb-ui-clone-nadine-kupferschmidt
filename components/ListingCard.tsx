@@ -1,16 +1,14 @@
+import type React from "react";
+import Link from "next/link";
+
 import type { Listing } from "@/types/listing";
-import { HeartIcon, StarIcon, TrophyIcon } from "@/components/icons";
+import { HeartIcon, TrophyIcon } from "@/components/icons";
+import ListingPrice from "@/components/ListingPrice";
+import ListingRating from "@/components/ListingRating";
 
 interface ListingCardProps {
   listing: Listing;
 }
-
-const formatPrice = (value: number) =>
-  new Intl.NumberFormat("es-CR", {
-    style: "currency",
-    currency: "CRC",
-    maximumFractionDigits: 0,
-  }).format(value);
 
 const ListingCard = ({ listing }: ListingCardProps) => {
   const details = [listing.bedrooms, listing.beds, listing.bathrooms].filter(
@@ -18,7 +16,7 @@ const ListingCard = ({ listing }: ListingCardProps) => {
   );
 
   return (
-    <div className="w-full">
+    <Link href={`/rooms/${listing.id}`} className="block w-full">
       <div className="relative">
         <img
           src={listing.imageUrl}
@@ -35,6 +33,10 @@ const ListingCard = ({ listing }: ListingCardProps) => {
 
         <button
           type="button"
+          onClick={(event: React.MouseEvent) => {
+            event.preventDefault();
+            event.stopPropagation();
+          }}
           className="absolute top-3 right-3 bg-black/20 rounded-full p-1.5"
         >
           <HeartIcon className="w-6 h-6 text-white" />
@@ -43,19 +45,10 @@ const ListingCard = ({ listing }: ListingCardProps) => {
 
       <div className="mt-2 flex items-start justify-between gap-2">
         <h3 className="font-bold truncate">{listing.title}</h3>
-        <div className="flex items-center gap-1 text-sm shrink-0">
-          {listing.rating ? (
-            <>
-              <StarIcon className="w-4 h-4" />
-              <span>{listing.rating}</span>
-              {listing.reviewCount !== undefined && (
-                <span>({listing.reviewCount})</span>
-              )}
-            </>
-          ) : (
-            <span>Novedad</span>
-          )}
-        </div>
+        <ListingRating
+          rating={listing.rating}
+          reviewCount={listing.reviewCount}
+        />
       </div>
 
       <p className="text-gray-500">{listing.subtitle}</p>
@@ -70,16 +63,11 @@ const ListingCard = ({ listing }: ListingCardProps) => {
         </span>
       )}
 
-      <p className="mt-1">
-        {listing.originalPrice && (
-          <span className="line-through text-gray-400 mr-1">
-            {formatPrice(listing.originalPrice)}
-          </span>
-        )}
-        <span className="font-bold">{formatPrice(listing.pricePerNight)}</span>{" "}
-        <span className="text-gray-500">por noche</span>
-      </p>
-    </div>
+      <ListingPrice
+        pricePerNight={listing.pricePerNight}
+        originalPrice={listing.originalPrice}
+      />
+    </Link>
   );
 };
 
