@@ -15,6 +15,7 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [listings, setListings] = useState<Listing[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [showAllListings, setShowAllListings] = useState<boolean>(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -41,17 +42,38 @@ export default function Home() {
         onCategoryChange={setActiveCategory}
       />
 
+      <h2 className="text-2xl font-bold px-4 md:px-8 pt-8">
+        Alojamientos enteros con las mejores comodidades
+      </h2>
+      <p className="text-gray-500 px-4 md:px-8 mb-4">
+        Encuentra alojamientos con cocina, wifi, jacuzzis y mucho más.
+      </p>
       <main>
         {isLoading ? (
           <p className="p-8 text-center">Cargando alojamientos...</p>
         ) : filteredListings.length === 0 ? (
           <p className="p-8 text-center">No se encontraron alojamientos</p>
         ) : (
-          <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 md:p-8">
-            {filteredListings.map((listing) => (
-              <ListingCard key={listing.id} listing={listing} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-3 md:p-8">
+              {(showAllListings
+                ? filteredListings
+                : filteredListings.slice(0, 3)
+              ).map((listing) => (
+                <ListingCard key={listing.id} listing={listing} />
+              ))}
+            </div>
+            {filteredListings.length > 3 && (
+              <div className="flex justify-center p-4">
+                <button
+                  onClick={() => setShowAllListings((current) => !current)}
+                  className="border border-gray-900 rounded-full px-6 py-2 font-medium hover:bg-gray-900 hover:text-white"
+                >
+                  {showAllListings ? "Ver menos" : "Descubre más"}
+                </button>
+              </div>
+            )}
+          </>
         )}
       </main>
       <Footer />
