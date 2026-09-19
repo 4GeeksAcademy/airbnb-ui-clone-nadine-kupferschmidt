@@ -49,7 +49,7 @@ const CatalogPage = () => {
             {sortedListings.length} alojamientos encontrados
           </h1>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-nowrap gap-2">
             <button
               type="button"
               onClick={() =>
@@ -57,7 +57,7 @@ const CatalogPage = () => {
                   currentOrder === "asc" ? null : "asc",
                 )
               }
-              className={`rounded-full border px-4 py-2 text-sm ${
+              className={`rounded-full border px-3 py-2 text-sm md:px-4 ${
                 sortOrder === "asc"
                   ? "border-rose-500 bg-rose-500 text-white"
                   : "border-gray-300 text-gray-700 hover:bg-gray-100"
@@ -72,7 +72,7 @@ const CatalogPage = () => {
                   currentOrder === "desc" ? null : "desc",
                 )
               }
-              className={`rounded-full border px-4 py-2 text-sm ${
+              className={`rounded-full border px-3 py-2 text-sm md:px-4 ${
                 sortOrder === "desc"
                   ? "border-rose-500 bg-rose-500 text-white"
                   : "border-gray-300 text-gray-700 hover:bg-gray-100"

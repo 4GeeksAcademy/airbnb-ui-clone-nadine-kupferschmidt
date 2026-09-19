@@ -99,3 +99,30 @@ Basado en capturas de airbnb.com en 375px: la vista real incluye muchas más sec
 - Galería: 1 foto grande + grid 2x2 de fotos chicas, con botón "Mostrar todas las fotos" superpuesto.
 - Nav secundaria opcional (no requerida por el brief): tabs "Fotos · Servicios · Reseñas · Ubicación" con anchor scroll, sticky debajo de la navbar.
 - BookingCard: sticky en su columna mientras hay contenido al lado (comportamiento avanzado opcional — en la referencia real colapsa a una barra horizontal compacta durante la sección de mapa; se simplifica a un `sticky` normal en la implementación del proyecto).
+
+---
+
+## Evolución del proyecto después del cumplimiento del brief
+
+Todo lo documentado arriba fue la especificación de partida, construida antes de escribir código, siguiendo el flujo de vision-prompt pedido por la consigna. Una vez que las tres vistas cumplían el brief al 100% (setup, tipos, componentes reutilizables, `useState`/`useEffect` en los casos pedidos, navegación con `Link`, mobile-first), quedó tiempo disponible y se usó para pulir la experiencia y agregar funcionalidades propias, no exigidas por la consigna. Estas son las mejoras, con el motivo de cada una:
+
+**Identidad visual consistente.** El logo usa color rosa (`rose-500`). Se llevó ese mismo color a todos los estados interactivos de la app (foco del buscador, categorías activas, filtros activos, botones de orden activos, hover de tarjetas y botones), para que la marca se sienta coherente en toda la interfaz en vez de mezclar rosa con negro/gris.
+
+**Categorías funcionales de verdad.** En la especificación original, `CategoryFilter` solo resaltaba visualmente la categoría elegida, sin filtrar nada (así lo pedía el brief). Se decidió ir un paso más allá y hacer que las categorías (Playa, Cabañas, Piscina, Vistas) filtren realmente la grilla de alojamientos, agregando un campo `category` a los datos de cada alojamiento. También se le agregaron íconos propios más representativos de cada categoría (ola de mar, casita, gota de agua, árbol) en vez de reutilizar íconos genéricos sin relación visual con el nombre.
+
+**Catálogo completo con página de detalle para cada alojamiento.** Originalmente solo se habían creado datos de ejemplo (`mockRooms`) para 3 de los 6 alojamientos. Se completaron los 3 restantes para que **todas** las tarjetas del catálogo lleven a una página de Room Detail real, sin excepciones.
+
+**Menú de navegación funcional.** El ícono de menú en el Navbar, que en la versión base era solo decorativo, ahora despliega un menú simple con accesos directos a "Inicio" y "Catálogo". El logo también se hizo clickeable hacia el inicio en ambas variantes de navbar (la de Home/Catalog y la simplificada de Room Detail).
+
+**Secciones nuevas en la Home, inspiradas en la landing real de Airbnb pero adaptadas al alcance del proyecto:**
+- *TrustSection*: tres bloques cortos ("Reserva con confianza", "Descubre más comodidades", "Aprovecha la flexibilidad"), para darle a la página una sensación más completa y menos "vacía" después de la grilla de alojamientos.
+- *FaqSection*: un acordeón de preguntas frecuentes inventadas sobre la plataforma, para practicar otro caso de `useState` (qué pregunta está abierta) y sumar contenido de cierre a la página.
+- Se probó también agregar una sección de bienvenida tipo hero (foto + título + texto), pero finalmente se descartó de la Home: se priorizó mantener la página más limpia y con el Navbar funcional (buscador + categorías) como lo primero que ve el usuario, en línea con lo que pide el brief para esta vista.
+
+**Ajustes de experiencia en Home:** la Home ahora muestra solo 3 alojamientos como vista previa, con un botón "Descubre más" que lleva al catálogo completo — así la página de inicio no se siente sobrecargada, y el catálogo cumple su función de mostrar todo el listado.
+
+**Fotos curadas manualmente.** Las fotos de ejemplo empezaron siendo completamente aleatorias (`picsum.photos`), sin relación con el texto de cada alojamiento. Se pasó luego a un servicio con fotos por temática (`loremflickr`, filtrando por etiquetas como "cabin" o "beach"), y finalmente se reemplazaron por fotos específicas elegidas a mano en Unsplash para que cada alojamiento tenga una imagen realmente coherente con su descripción (por ejemplo, que "Cabaña acogedora en el bosque" muestre efectivamente una cabaña). También se ajustó la calidad y el tamaño de las imágenes (parámetros `q` y `w` en la URL) para que la página cargue más rápido sin perder calidad visual perceptible.
+
+**Detalle de datos más legible.** Los datos de habitaciones/camas/baños en las tarjetas pasaron de mostrarse como números sueltos ("4 · 5 · 3") a incluir la etiqueta de cada uno ("4 cuartos · 5 camas · 3 baños"), para que la información se entienda sin necesidad de adivinar qué representa cada número.
+
+**Ajustes de responsive en Catalog.** Se corrigió el tamaño del mapa placeholder en pantallas grandes (se veía desproporcionadamente alto) y se aseguró que los botones de orden por precio queden en una sola fila incluso en pantallas de 375px.
